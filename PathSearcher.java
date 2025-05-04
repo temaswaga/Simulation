@@ -24,8 +24,8 @@ public class PathSearcher {
                 }
             }
 
-            if (nearlyTargetCordsGetter(map, currentCords, map.getCreature(map.worldMap, cordsOfSubject)) != null ) {
-                path.push(nearlyTargetCordsGetter(map, currentCords, map.getCreature(map.worldMap, cordsOfSubject)));
+            if (ifThereIsATargetNearlyCordsGetter(map, currentCords, map.getCreature(map.worldMap, cordsOfSubject)) != null ) {
+                path.push(ifThereIsATargetNearlyCordsGetter(map, currentCords, map.getCreature(map.worldMap, cordsOfSubject)));
                 if (!currentCords.equals(cordsOfSubject)) {
                     path.push(currentCords);
                 }
@@ -43,7 +43,7 @@ public class PathSearcher {
         return path;
     }
 
-    public static Coordinates nearlyTargetCordsGetter(Map map, Coordinates checkingCords, Creature creature) {
+    public static Coordinates ifThereIsATargetNearlyCordsGetter(Map map, Coordinates checkingCords, Creature creature) {
         if (map == null || map.worldMap == null || checkingCords == null || creature == null) {
             return null;
         }

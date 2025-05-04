@@ -2,7 +2,7 @@ import java.util.HashMap;
 import java.util.Random;
 
 public class Map {
-     HashMap<Coordinates, Entity> worldMap = new HashMap<>();
+    HashMap<Coordinates, Entity> worldMap = new HashMap<>();
 
     public boolean isThereAnEntity(HashMap<Coordinates, Entity> map, Coordinates coordinates) {
         return map.get(coordinates) != null;

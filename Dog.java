@@ -1,5 +1,6 @@
 public class Dog extends Creature {
     public final static String DOG_SYMBOL = "\uD83D\uDC36";
+    private final int speed = 1;
 
     @Override
     public String toString() {
@@ -7,8 +8,8 @@ public class Dog extends Creature {
     }
 
     @Override
-    public int getSpeed(Creature creature) {
-        return 1;
+    public int getSpeed() {
+        return speed;
     }
 
     @Override

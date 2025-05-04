@@ -1,5 +1,6 @@
 public class Cat extends Creature {
     public final static String CAT_SYMBOL = "\uD83D\uDC31" ;
+    private final int speed = 1;
 
     @Override
     public String toString() {
@@ -7,8 +8,8 @@ public class Cat extends Creature {
     }
 
     @Override
-    public int getSpeed(Creature creature) {
-        return 1;
+    public int getSpeed() {
+        return speed;
     }
 
     @Override
