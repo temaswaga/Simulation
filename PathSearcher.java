@@ -1,8 +1,8 @@
 import java.util.*;
 
-public class RoadSearcher {
+public class PathSearcher {
 
-    public static Stack<Coordinates> pathFinder(Map map, Coordinates cordsOfSubject) {
+    public static Stack<Coordinates> pathSearcher(Map map, Coordinates cordsOfSubject) {
         ArrayList<Coordinates> notVisitedNodesArray = new ArrayList<>();
         ArrayList<Coordinates> alreadyVisitedNodesArrayList = new ArrayList<>();
 
@@ -67,20 +67,6 @@ public class RoadSearcher {
         return null;
 
         }
-
-        public static Coordinates creatureMover(Map map, Coordinates currentCords) {
-        if (map.isThereAnEntity(map.worldMap, currentCords)) {
-            Entity entity = map.getEntity(map.worldMap, currentCords);
-            if (entity instanceof Cat || entity instanceof Dog) {
-                Stack<Coordinates> path = RoadSearcher.pathFinder(map, currentCords);
-                if (!path.empty()) {
-                    map.getCreature(map.worldMap, currentCords).makeMove(map, currentCords, path.peek());
-                    return path.peek();
-                }
-            }
-        }
-        return null;
-    }
 
 
 

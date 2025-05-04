@@ -1,6 +1,6 @@
 public class MapRenderer {
 
-    public static void renderer(Map map) {
+    public static void mapRenderer(Map map) {
         System.out.print("0  ");
         for(int i = 0; i < 8; ++i) {
             System.out.print(i + 1 + "  ");
